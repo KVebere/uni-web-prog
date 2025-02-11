@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>move element</title>
+
+<div>
+  <h1>Origin</h1>
+  <p>This gets moved once</p>
+  <p>This also gets moved once</p>
+  <p id=moveme>This gets moved twice</p>
+</div>
+
+<div id=dest1>
+  <h1>Destination One</h1>
+</div>
+
+<div id=dest2>
+  <h1>Destination Two</h1>
+</div>
+
+<script>
+  // move all paras to destination one
+  const paras = document.querySelectorAll("p");
+  const dest1 = document.querySelector("#dest1");
+
+  for (const p of paras) {
+    dest1.append(p);
+  }
+
+  // move one element to destination two
+  const dest2 = document.querySelector("#dest2");
+  const moveme = document.querySelector("#moveme");
+  dest2.append(moveme);
+</script>

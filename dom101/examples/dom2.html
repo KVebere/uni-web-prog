@@ -1,0 +1,16 @@
+<!doctype html>
+<title>accessing by id too early</title>
+<h1 id=ex1>Hello</h1>
+
+<script>
+  console.log(window.ex1);
+  console.log(document.getElementById("ex1"));
+  console.log(document.querySelector("#ex1"));
+  console.log(document.querySelector("#ex2"));
+</script>
+
+<p id=ex2>Late to the party</p>
+
+<script>
+  console.log(document.querySelector("#ex2"));
+</script>

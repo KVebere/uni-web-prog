@@ -1,0 +1,8 @@
+
+  #qunit-tests li {
+    white-space: pre-line !important;
+  }
+
+  #qunit-testrunner-toolbar {
+    display: none;
+  }

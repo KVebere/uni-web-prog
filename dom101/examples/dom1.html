@@ -1,0 +1,15 @@
+<!doctype html>
+<title>accessing by id</title>
+<h1 id='ex1'>Hello</h1>
+
+<script>
+//danger - this first way is fragile and should be avoided
+console.log(window.ex1);
+
+//this second way is old fashioned and should be avoided
+console.log(document.getElementById("ex1"));
+
+//this third way is current recommended practice
+console.log(document.querySelector("#ex1"));
+</script>
+

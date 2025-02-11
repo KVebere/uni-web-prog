@@ -1,0 +1,14 @@
+<!doctype html>
+<title>remove element</title>
+
+<ul id=x>
+  <li>First line
+  <li>Second line
+  <li id="removeThis">Removed line
+  <li>Last Line
+<ul>
+
+<script>
+  const elem = document.querySelector("#removeThis");
+  elem.remove();
+</script>

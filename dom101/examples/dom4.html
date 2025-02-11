@@ -1,0 +1,16 @@
+<!doctype html>
+<title>text content</title>
+
+<p id="foo">
+  hello
+</p>
+
+<script>
+  const foo = document.querySelector("#foo");
+
+  console.log(foo.textContent);
+
+  foo.textContent = "bye";
+
+  console.log(foo.textContent);
+</script>

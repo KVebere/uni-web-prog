@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>move element</title>
+
+<div>
+  <h1>Counting</h1>
+  <p>First</p>
+  <p id=third>Third</p>
+  <p>Fifth</p>
+  <p id="second">Second</p>
+  <p id="fourth">Fourth</p>
+  <p id="fourpointfive">Four point five-th</p>
+</div>
+
+<script>
+  // move all paras to destination one
+  const second = document.querySelector("#second");
+  const third = document.querySelector("#third");
+  const fourth = document.querySelector("#fourth");
+  const fourpointfive = document.querySelector("#fourpointfive");
+
+  // move second before third
+  third.before(second);
+
+  // move two elements after the third
+  third.after(fourth, fourpointfive);
+</script>

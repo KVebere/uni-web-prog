@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="qunit/qunit-2.9.2.css">
+<link rel="stylesheet" href="qunit/extra.css">
+<title>DOM 101: Unit test output</title>
+
+<style>
+    .interesting {
+        background: red;
+        color: white;
+    }
+
+    .greatcontent {
+        background: #FF6600;
+        color: white;
+        padding: 1rem;
+    }
+
+    .excellence {
+        border: #FFFF00 dotted 0.5rem;
+    }
+
+    .downer {
+        border: #660066 dotted 0.5rem;
+        background: #000;
+        color: #888;
+        padding: 1rem;
+    }
+
+    .done {
+        padding: 1rem;
+        border: solid #990099 thin;
+        border-left: solid #990099 1rem;
+    }
+
+    .lovely {
+        color: #FFFF00;
+    }
+</style>
+
+<h1>DOM Unit Tests</h1>
+<p>These are unit tests.  A series of small tests that challenge you to implement some code that
+   manipulates the DOM in some way.  When your code does what is required, the test passes, and
+    you should move on to the next test.
+
+<div id="qunit">
+</div>
+
+<article>
+
+    <h1>Content for use by tests.</h1>
+    <p>These are the elements that are part of the DOM that your code will access in order to pass the tests.</p>
+
+    <section>
+        <h1>Find an element by its ID</h1>
+        <p id=thisisaparagraph>This is a paragraph.</p>
+    </section>
+
+    <section>
+        <h1>Add some text to an element</h1>
+        <p id=addto>Does it work yet?</p>
+    </section>
+
+    <section>
+        <h1>Replace the text in an element</h1>
+        <p id=replacethis>𝔯𝔢𝔭𝔩𝔞𝔠𝔢 𝔱𝔥𝔦𝔰</p>
+    </section>
+
+
+    <section id=selectus>
+        <h1>Find all elements matching more complex criteria (selector)</h1>
+
+        <p class=selectus>This is a paragraph.</p>
+        <p class=selectus>This is also a paragraph.</p>
+        <p class=selectus>This too is yet another paragraph.</p>
+    </section>
+
+
+    <section>
+        <h1>Set the src, alt &amp; title of an image</h1>
+        <p><a href=http://dummyimage.com>dummyimage.com</a> and <a href=placebear.com>placebear.com</a> are websites that serve pictures in specific sizes.</p>
+        <img id=animals src=https://dummyimage.com/600x400/FF6900/fff.png alt="Not a bear..." title="Not a bear...">
+    </section>
+
+
+    <section>
+        <h1>Set the class of an element</h1>
+        <p id=setmyclass>In the beginning was the text, and the text was without class, and the developer gave unto it a class, and the class was `interesting`.</p>
+    </section>
+
+
+    <section>
+        <h1>Add a class to an element without affecting other classes it has</h1>
+        <p id=wantaborder class="greatcontent">I am a paragraph with great content, and what more could a paragraph want than an excellent border, as provided by the `excellence` class?</p>
+    </section>
+
+
+    <section>
+        <h1>Remove a class from an element without affecting other classes it has</h1>
+
+        <p id=helpme class="greatcontent excellence downer">I am a paragraph with great content, however someone put a bit of a `downer` in my classes and with that removed I too could show my excellence.</p>
+    </section>
+
+
+    <section>
+        <h1>Fill an empty list with the contents of an array</h1>
+        <ul id=fillthislist>
+        </ul>
+    </section>
+
+
+    <section id=noevens>
+        <h1>Remove all elements matching some selection criteria</h1>
+        <p>I love you</p>
+        <p>I hate you</p>
+        <p>I love you</p>
+        <p>I hate you</p>
+        <p>I love you</p>
+        <p>I hate you</p>
+    </section>
+
+
+    <section>
+        <h1>Reverse the contents of a list</h1>
+        <ul id=reverseme>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <p>Blast off!</p>
+
+        <h1>Star Wars Movies</h1>
+        <ul id=reversemetoo>
+            <li>The Phantom Menace</li>
+            <li>Attack of the Clones</li>
+            <li>Revenge of the Sith</li>
+            <li>A New Hope</li>
+            <li>The Empire Strikes Back</li>
+            <li>Return of the Jedi</li>
+            <li>The Force Awakens</li>
+        </ul>
+
+    </section>
+
+
+    <section>
+        <h1>Move an element from one list to the end of another list</h1>
+        <ul id=listone>
+            <li>not me</li>
+            <li>not me</li>
+            <li id=moveme>move me</li>
+            <li>not me</li>
+        </ul>
+        <ul id=listtwo>
+            <li>not me</li>
+            <li>not me</li>
+            <li>not me</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h1>Duplicate an element identified by a selector</h1>
+        <p id=dupeme>Duplicate me!</p>
+    </section>
+
+
+    <section>
+        <h1>Let user tell us about themself</h1>
+        <p>Name: <input id="username" value="John"></p>
+        <p>Speed: <input type="range" id="speed" min="-20" max="100" value="70"></p>
+        <p>Student: <input type="checkbox" id="student" checked></p>
+    </section>
+</article>
+
+
+    <script>
+      window.topic = "ws_dom";
+    </script>
+    <script src="qunit/qunit-2.9.2.js"></script>
+    <script src="qunit/qunit-ext.js"></script>
+    <script src="index.js"></script>
+    <script src="test.js"></script>
+
+</html>
