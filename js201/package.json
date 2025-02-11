@@ -1,0 +1,27 @@
+{
+  "name": "js-unit-tests",
+  "version": "1.1.0",
+  "description": "JavaScript Basics Unit Tests",
+  "main": "index.html",
+  "author": "Software Engineering <softeng@port.ac.uk>",
+  "contributors": [
+    "Rich Boakes <rjb@port.ac.uk>",
+    "Jacek Kopecky <jacek@port.ac.uk>",
+    "Matt Dennis <matt.dennis@port.ac.uk>"
+  ],
+  "license": "UNLICENSED",
+  "jshintConfig": {
+    "globalstrict": true
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-portsoc": "^0.8.1"
+  },
+  "eslintConfig": {
+    "extends": "portsoc",
+    "root": true,
+    "env": {
+      "browser": true
+    }
+  }
+}
