@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Event 8</title>
+
+<style>
+  button {
+    transition: transform 1s ease-in-out;
+    position: absolute;
+    width: 10vw;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    transform: translate(45vw, 45vh);
+  }
+  .active {
+    background: #CC4400;
+    color: #ffffff;
+  }
+</style>
+
+<p>Score <span id=score>0</span></p>
+
+<script>
+  let clicks = 0;
+
+  function recordClick(e) {
+    if (e.target.classList.contains('active')) {
+      const score = document.querySelector('#score');
+      clicks += 1;
+      score.textContent = clicks;
+    }
+  }
+
+  function moveElem(e) {
+    e.style.transform = `translate(${Math.random() * 90}vw, ${Math.random() * 90}vh )`;
+  }
+
+  function moveAway(e) {
+    moveElem(e.target);
+  }
+
+  function activateRandomButton() {
+    const buttons = document.querySelectorAll('button');
+    for (const b of buttons) {
+      b.classList.remove('active');
+    }
+    const randomIndex = Math.floor(Math.random() * buttons.length);
+    buttons[randomIndex].classList.add('active');
+  }
+
+  function createButtons(n) {
+    for (let i = 0; i < n; i++) {
+      const b = document.createElement('button');
+      b.textContent = 'ClickMe!';
+      moveElem(b);
+      document.body.append(b);
+    }
+  }
+
+  createButtons(50);
+  const buttons = document.querySelectorAll('button');
+  for (const b of buttons) {
+    b.addEventListener('click', recordClick);
+    b.addEventListener('mouseover', moveAway);
+  }
+
+  window.setInterval(activateRandomButton, 1000);
+</script>

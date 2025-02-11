@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Event 4</title>
+
+<input
+  id=fn
+  type=text
+  placeholder="Type your name…">
+
+<p id=greeting>No name yet.</p>
+
+<script>
+  function handleInput(e) {
+    const out = document.querySelector('#greeting');
+    out.textContent = 'Hello ' + e.target.value;
+  }
+
+  const fn = document.querySelector('#fn');
+  fn.addEventListener('input', handleInput);
+</script>

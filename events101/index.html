@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Events Worksheet</title>
+    <link rel="stylesheet" href="style/qunit.css">
+    <link rel="stylesheet" href="style/extra.css">
+</head>
+
+<body>
+    <div id="qunit">
+    </div>
+
+    <section>
+        <h1>The First Button</h1>
+        <button id=button0>Click Me</button>
+    </section>
+
+
+    <section>
+        <h1>The Lovely Paragraph</h1>
+        <p id=thisisalovelyparagraph>This is a paragraph whose loveliness can be toggled on and off with a button click.</p>
+    </section>
+
+
+    <section>
+        <h1>The Lovely Button</h1>
+        <button id=button1>Lovely Toggle</button>
+    </section>
+
+    <section id=conzone>
+        <h1>The Concatenation Zone</h1>
+        <p>What is your first name? <input id=in1 placeholder="first"></input></p>
+        <p>What is yout family name?<input id=in2 placeholder="second"></input></p>
+        <p>Hello <span id=out1></span></p>
+        <p>NB: you have to press enter or move the cursor to the next input field to make the content change.</p>
+    </section>
+
+    <section id=watchingmice>
+        <h1>The MouseWatcher Zone</h1>
+        <div id=mousewatcher><p id=snitch>???</p></div>
+    </section>
+
+    <section id=reportingmice>
+        <h1>The Mouse Reporter</h1>
+        <div id=mousereporter><p id=report></p></div>
+    </section>
+
+    <section id=newids>
+        <h1>Enter new ID: </h1>
+        <p>new ID (no spaces allowed): <input id=newid> <span id=newiderror>(An ID cannot have any spaces!)</span></p>
+    </section>
+
+    <script src="qunit-2.9.2.js"></script>
+    <script src="qunit-ext.js"></script>
+    <script src="extras.js"></script>
+    <script src="index.js"></script>
+    <script src="test.js"></script>
+</body>
+
+</html>

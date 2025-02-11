@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Event 2</title>
+
+<button>Button One</button>
+<button>Button Two</button>
+<button>Button Three</button>
+
+<output id=out>Nothing yet…</output>
+
+<script>
+  function handleClick(e) {
+    const out = document.querySelector('#out');
+    out.textContent = 'You clicked ' + e.target.textContent;
+  }
+
+  const buttons = document.querySelectorAll('button');
+  for (const b of buttons) {
+    b.addEventListener('click', handleClick);
+  }
+</script>

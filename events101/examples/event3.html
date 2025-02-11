@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Event 3</title>
+
+<style>
+  .active {
+    background: #CC4400;
+    color: #ffffff;
+  }
+</style>
+
+
+<button>Button One</button>
+<button>Button Two</button>
+<button>Button Three</button>
+
+<output id=out>Nothing yet…</output>
+
+<script>
+  function handleClick(e) {
+    const out = document.querySelector('#out');
+    out.textContent = 'You clicked ' + e.target.textContent;
+  }
+
+  function switchElement(e) {
+    e.target.classList.toggle('active');
+  }
+
+  const buttons = document.querySelectorAll('button');
+  for (const b of buttons) {
+    b.addEventListener('click', handleClick);
+    b.addEventListener('click', switchElement);
+  }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Event 5</title>
+
+<input
+  id=fn
+  type=text
+  placeholder="Type your first name…">
+<input
+  id=sn
+  type=text
+  placeholder="Type your family name…">
+<input
+  id=age
+  type=number
+  placeholder="Type your age…">
+
+<p id=greeting>Preparing greeting…</p>
+
+<script>
+  function handleInput() {
+    const out = document.querySelector('#greeting');
+    const fn = document.querySelector('#fn')?.value;
+    const sn = document.querySelector('#sn')?.value;
+    const age = document.querySelector('#age')?.valueAsNumber;
+    if (fn && sn && age) {
+      out.textContent =
+      `Hello ${fn} ${sn}!  Next year you'll be ${age + 1}`;
+    }
+  }
+
+  const inputs = document.querySelectorAll('input');
+  for (const i of inputs) {
+    i.addEventListener('input', handleInput);
+  }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Event 6</title>
+
+<style>
+  button {
+    transition: transform 1s ease-in-out;
+    position: absolute;
+    width: 10vw;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    transform: translate(45vw, 45vh);
+  }
+</style>
+
+<button>Button</button>
+
+<script>
+  function moveAway(e) {
+    e.target.style.transform = `translate(${Math.random() * 95}vw, ${Math.random() * 95}vh )`;
+  }
+
+  const button = document.querySelector('button');
+  button.addEventListener('mouseover', moveAway);
+</script>
