@@ -1,0 +1,44 @@
+{
+  "name": "fetch101",
+  "version": "1.1.0",
+  "description": "Examples of fetch",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/portsoc/fetch101.git"
+  },
+  "scripts": {
+    "start": "http-server",
+    "examples": "./node_modules/.bin/http-server examples; "
+  },
+  "author": "SoftEng <softeng@port.ac.uk>",
+  "contributors": [
+    "Rich Boakes <rich@boakes.org>",
+    "Jacek Kopecky <jacek@jacek.cz>",
+    "Matt Dennis <m@matt.qa>"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/portsoc/fetch101/issues"
+  },
+  "homepage": "https://github.com/portsoc/fetch101#readme",
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-portsoc": "^0.8.1",
+    "http-server": "^14.1.0"
+  },
+  "eslintConfig": {
+    "extends": "portsoc",
+    "root": true,
+    "env": {
+      "browser": true
+    },
+    "globals": {
+      "QUnit": "readonly",
+      "showMessage": "writable",
+      "showList": "writable",
+      "startShowingMessage": "writable",
+      "handleError": "writable",
+      "drawBox": "writable"
+    }
+  }
+}
